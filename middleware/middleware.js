@@ -6,18 +6,18 @@ const middleware = (req, res, next) => {
     const fgWhite = "\x1b[37m"
     switch (req.method) {
       case 'GET': {
-        console.info(fgGreen `${req.method} request to ${req.path}`);
+        console.info(`${fgGreen}${req.method} request to ${req.path}`);
         break;
       }
       case 'POST': {
-        console.info(fgYellow `${req.method} request to ${req.path}`);
+        console.info(`${fgYellow}${req.method} request to ${req.path}`);
         break;
       }
       case 'DELETE': {
-        console.info(fgRed `${req.method} request to ${req.path}`)
+        console.info(`${fgRed}${req.method} request to ${req.path}`)
       }
       default:
-        console.log(fgWhite `${req.method} request to ${req.path}`);
+        console.log(`${fgWhite}${req.method} request to ${req.path}`);
     }
   
     next();
