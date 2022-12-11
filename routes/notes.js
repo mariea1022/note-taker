@@ -3,7 +3,7 @@ const ns = require('express').Router();
 const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
 
 // GET route for retrieving all the notes
-ns.get('/notes', (res, res) =>
+ns.get('/notes', (req, res) =>
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 

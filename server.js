@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { middleware } = require('./middleware/middleware');
-// const api = require('./routes');
+const api = require('./routes/index');
 
 const PORT = 3001;
 
@@ -12,7 +12,7 @@ app.use(middleware)
 // middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded( { extended: true }));
-// app.use('/api', api)
+app.use('/api', api)
 
 // will direct to the home page
 app.use(express.static('public'));
