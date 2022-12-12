@@ -6,5 +6,10 @@
     {
         "title": "Test Title 2",
         "text": "Another test"
+    },
+    {
+        "title": "Test 3",
+        "text": "Test with id",
+        "id": "7dd9"
     }
 ]
