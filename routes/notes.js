@@ -3,12 +3,12 @@ const ns = require('express').Router();
 const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
 
 // GET route for retrieving all the notes
-ns.get('/notes', (req, res) =>
+ns.get('/', (req, res) =>
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
 // POST route for submitting notes
-ns.post('/notes', (req, res) => {
+ns.post('/', (req, res) => {
     // destructuring assignment for items in re.body
     const { title, text } = req.body;
     // if all the required properties are present
