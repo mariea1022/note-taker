@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const { middleware } = require('./middleware/middleware');
 const api = require('./routes/index');
-let notesArray = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
@@ -29,5 +28,5 @@ app.get('/notes', (req, res) =>
 );
 
 app.listen(PORT, () =>
-    console.log(`App listening at http://localhost:${PORT}`)
+    console.log(`App listening at ${PORT}`)
 );
