@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { parse } = require('path');
 const util = require('util');
 
 // Promise version of fs.readFile
@@ -32,4 +33,19 @@ const readAndAppend = (content, file) => {
  });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+const findByIdAndDelete = (id, file) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+        } else {
+          const parsedData = JSON.parse(data);
+          console.log('PARSED DATA', parsedData)
+          // filter parsedData 
+          const newParsedData = parsedData.filter(id => id !== parsedData.id);
+          console.log('PARSED DATA 2', newParsedData)
+          writeToFile(file, newParsedData)
+        }
+      });
+}
+
+module.exports = { readFromFile, writeToFile, readAndAppend, findByIdAndDelete };

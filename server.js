@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const { middleware } = require('./middleware/middleware');
 const api = require('./routes/index');
+let notesArray = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 

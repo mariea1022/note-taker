@@ -1,15 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "Test Title 2",
-        "text": "Another test"
-    },
-    {
         "title": "Test 3",
         "text": "Test with id",
         "id": "7dd9"
+    },
+    {
+        "title": "how to delete using express?",
+        "text": "through id's?",
+        "id": "7c23"
     }
 ]
