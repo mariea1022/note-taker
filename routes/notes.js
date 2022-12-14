@@ -36,11 +36,11 @@ ns.post("/", (req, res) => {
   }
 });
 
-// ns.delete("/:id", function (req, res) {
-//   const requestedId = req.params.id;
-//   findByIdAndDelete(requestedId, "./db/db.json");
-//   res.json("success")
-// });
+ns.delete("/:id", function (req, res) {
+  const requestedId = req.params.id;
+  findByIdAndDelete(requestedId, "./db/db.json");
+  res.json("success")
+});
 
 // Return a message if the id doesn't exist in our DB
 //   return res.json('No ID found');

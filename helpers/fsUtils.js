@@ -33,21 +33,20 @@ const readAndAppend = (content, file) => {
   });
 };
 
-// const findByIdAndDelete = (id, file) => {
-//   fs.readFile(file, "utf8", (err, data) => {
-//     if (err) {
-//       console.error(err);
-//     } else {
-//       console.log(readFromFile);
-//       const parsedData = JSON.parse(data);
-//       console.log("PARSED DATA", parsedData);
-//       // filter parsedData
-//       parsedData.filter((id) => id !== parsedData.id);
-//       //   console.log('PARSED DATA 2', newParsedData)
-//       writeToFile(file, parsedData);
-//     }
-//   });
-// };
+const findByIdAndDelete = (id, file) => {
+    fs.readFile(file, "utf8", (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        const parsedData = JSON.parse(data);
+        console.log(parsedData)
+        // loops though parsedData and every time it runs a loop it puts one of the objects in the array into singleparsedData
+        let newData = parsedData.filter((singleparsedData) => singleparsedData.id !== id);
+  
+        writeToFile(file, newData);
+      }
+    });
+  };
 
 module.exports = {
   readFromFile,
