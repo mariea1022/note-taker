@@ -16,7 +16,7 @@ Installed Express and deployed through Heroku.
 
 ## Usage
 
-[Here is the link to the deployed application on Heroku.](https://fsb-week-11-note-taker.herokuapp.com/notes)
+[Here is the link to the deployed application on Heroku.](https://fsb-week-11-note-taker.herokuapp.com/)
 
 To use this application, follow these steps:
 
